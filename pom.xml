@@ -259,6 +259,31 @@
 				</plugins>
 			</build>
 		</profile>
+		<profile>
+			<id>wrapper</id>
+			<build>
+				<defaultGoal>validate</defaultGoal>
+				<plugins>
+					<plugin>
+						<groupId>io.takari</groupId>
+						<artifactId>maven</artifactId>
+						<version>0.7.7</version>
+						<executions>
+							<execution>
+								<id>wrapper-latest</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>wrapper</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<properties>
+				<sort.skip>true</sort.skip>
+			</properties>
+		</profile>
 	</profiles>
 	<!--modules / -->
 	<!--repositories / -->
