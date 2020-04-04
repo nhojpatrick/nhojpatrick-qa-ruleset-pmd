@@ -190,22 +190,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>versions-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>versions-check</id>
-						<phase>validate</phase>
-						<goals>
-							<goal>display-parent-updates</goal>
-							<goal>display-dependency-updates</goal>
-							<goal>display-plugin-updates</goal>
-							<goal>display-property-updates</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 		<resources>
 			<resource>
@@ -294,6 +278,36 @@
 				<sort.sortOrderFile>src/main/resources/com/github/nhojpatrick/sortpom/sortorderfile/nhojpatrick.xml</sort.sortOrderFile>
 				<sort.sortPlugins>groupId,artifactId,version,scope</sort.sortPlugins>
 				<sort.sortProperties>false</sort.sortProperties>
+			</properties>
+		</profile>
+		<profile>
+			<id>versions</id>
+			<build>
+				<defaultGoal>validate</defaultGoal>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>versions-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>versions-check</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>display-parent-updates</goal>
+									<goal>display-dependency-updates</goal>
+									<goal>display-plugin-updates</goal>
+									<goal>display-property-updates</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<properties>
+				<downloadJavadocs>false</downloadJavadocs>
+				<downloadSources>false</downloadSources>
+				<maven.version.rules>file:///${session.executionRootDirectory}/src/main/resources/com/github/nhojpatrick/versions/ruleset/rules.xml</maven.version.rules>
+				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
 		<profile>
