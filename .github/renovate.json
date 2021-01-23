@@ -3,10 +3,7 @@
     "config:base"
   ],
   "dependencyDashboard": true,
-  "excludeCommitPaths": [
-    "relocation_com.github.nhojpatrick.pmd_nhojpatrick-pmd-ruleset/**",
-    "relocation_com.github.nhojpatrick.qa_nhojpatrick-pmd-ruleset/**"
-  ],
+  "excludeCommitPaths": ["relocation_**"],
   "labels": ["dependencies"],
   "additionalReviewers" : ["nhojpatrick"],
   "prHourlyLimit": 0,
