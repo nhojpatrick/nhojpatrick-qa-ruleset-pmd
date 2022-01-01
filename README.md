@@ -5,6 +5,7 @@
 [![CircleCI](https://img.shields.io/circleci/build/github/nhojpatrick/nhojpatrick-qa-ruleset-pmd/develop?label=circleci&style=plastic)](https://circleci.com/gh/nhojpatrick/nhojpatrick-qa-ruleset-pmd/tree/develop)
 [![coveralls](https://img.shields.io/coveralls/github/nhojpatrick/reop/branch?style=plastic)](https://coveralls.io/github/nhojpatrick/nhojpatrick-qa-ruleset-pmd?branch=develop)
 [![Known Vulnerabilities](https://snyk.io/test/github/nhojpatrick/nhojpatrick-qa-ruleset-pmd/develop/badge.svg)](https://snyk.io/test/github/nhojpatrick/nhojpatrick-qa-ruleset-pmd/develop)
+[![Maintainability](https://api.codeclimate.com/v1/badges/22fc2eaf1ecbca4e9b04/maintainability)](https://codeclimate.com/github/nhojpatrick/nhojpatrick-qa-ruleset-pmd/maintainability)
 
 PMD is a static code analysis tool to see if code adheres to 'your'
 coding standing. This project contains custom pmd rules.
