@@ -131,12 +131,6 @@ commands:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
           when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
-          when: always
 
   std_mvnw_jdk11:
     description: "Standard JDK11 mvnw steps"
@@ -151,12 +145,6 @@ commands:
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
           when: always
 
   std_mvnw_jdk17:
@@ -173,12 +161,6 @@ commands:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
           when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
-          when: always
 
   qa_checkstyle:
     description: "Standard mvnw checkstyle"
@@ -188,12 +170,6 @@ commands:
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}-checkstyle
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
           when: always
 
   qa_javadoc:
