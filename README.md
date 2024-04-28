@@ -84,7 +84,7 @@ To use pmd the following best practice is suggested, with these notes;
 	</profiles>
 	...
 	<properties>
-		<plugins.maven.maven-pmd-plugin>3.13.0</plugins.maven.maven-pmd-plugin>
+		<plugins.maven-pmd-plugin>3.17.0</plugins.maven-pmd-plugin>
 		<pmd.maxAllowedViolations>0</pmd.maxAllowedViolations>
 	</properties>
 </project>
